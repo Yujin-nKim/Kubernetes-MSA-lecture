@@ -3,9 +3,9 @@ version: '3.2'
 services:
   elasticsearch:
     build:
-      context: "${PWD}/ddd/"
+      context: "${PWD}/elasticsearch/"
       dockerfile: Dockerfile
-    volumes: # volume mount
+    volumes:
       - type: bind
         source: "${PWD}/elasticsearch/config/elasticsearch.yml"
         target: /usr/share/elasticsearch/config/elasticsearch.yml
